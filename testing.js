@@ -1,19 +1,24 @@
-// let popUpAlert = function() {
-//     alert("this works fine");
-// }
+// usar bucles for y while
+// pedir al usuario un numero y mostrarlo
+// pedir otro numero y sumar el resultado con el anterior
+//mostrar el nuevo numero y preguntar si quiere sumar otro
 
-// let converter = function(usd) {
-//     return usd*1200*1.21
-// }
 
-// //insert ARS 
+let primerNumero = parseInt(prompt("elija un numero"));
+alert(`el numero que usted eligio el es ${primerNumero}`)
 
-// console.log(converter(270));
+let repeat = true;
 
-// let weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+while (repeat) {
+    let manytimes = parseInt(prompt("cantas sumas quieres hacer?"))
+    let suma = primerNumero;
+    for (i = 1; i <= manytimes; i++) {
+        alert(`la suma actual es de ${suma} progreso (${i}/${manytimes})`)
+        primerNumero = parseInt(prompt("cuanto quiere sumar?"))
+        suma = primerNumero + suma
+    }
 
-// weekDays.pop();
+        repeat = false;
 
-// let pushed = weekDays.push();
-// console.log(pushed);
+}
 
