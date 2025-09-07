@@ -4,6 +4,8 @@
 //mostrar el nuevo numero y preguntar si quiere sumar otro
 
 
+
+function sumarNumeros() {
 let primerNumero = parseInt(prompt("elija un numero"));
 alert(`el numero que usted eligio el es ${primerNumero}`)
 
@@ -22,3 +24,30 @@ while (repeat) {
 
 }
 
+}
+
+// let restar = function(numero, resta=1){
+//     return numero - resta;
+// }
+
+// console.log(restar(5, 2));
+
+
+let checkBirthDay = function() {
+    let userYear = parseInt(prompt('en que año naciste?'))
+    let age = 2025 - userYear;
+    let checkBirthDay = prompt('ya paso tu cumpleaños?(y/n)')
+    if (checkBirthDay == 'y') {
+        return alert(`tu edad es ${age}`)
+    } else {
+        return alert(`tu edad es ${age - 1}`)
+    }
+}
+
+// checkBirthDay()
+
+let testing = function(numeroraro){
+    return numeroraro
+}
+
+console.log(testing())
