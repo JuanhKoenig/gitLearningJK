@@ -50,4 +50,35 @@ let testing = function(numeroraro){
     return numeroraro
 }
 
-console.log(testing())
+// console.log(testing())
+
+// Escribí una función que reciba un número y devuelva true si es par, o false si es impar.
+
+function parOimpar(numero){
+    if (numero % 2 !== 0) {
+        return false
+    } else {
+        return true
+    }
+}
+
+// console.log(parOimpar(7));
+
+//optimizadon con arrow function
+
+imparOpar = numero => (numero % 2 !== 0) ? false : true;
+
+// mas optimizado
+// const imparOpar = numero => numero % 2 === 0;
+// console.log(imparOpar(1));
+
+// funcion que reciba 2 numero y retorne el mayor:
+
+cualEsMayor = (num1, num2) => (num1 > num2) ? num1 : num2
+
+// console.log(cualEsMayor(10, 1))
+
+convertirAfar = temp => temp * 1.8 + 32
+
+console.log(convertirAfar(-17))
+
