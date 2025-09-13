@@ -80,5 +80,40 @@ cualEsMayor = (num1, num2) => (num1 > num2) ? num1 : num2
 
 convertirAfar = temp => temp * 1.8 + 32
 
-console.log(convertirAfar(-17))
+// console.log(convertirAfar(-17))
 
+const juan = {
+    nombre: "Juan",
+    edad: 28,
+    sePortaBien: true
+}
+
+const ricardo = {
+    nombre: "Ricardo",
+    edad: 81,
+    sePortaBien: true
+}
+
+const samira = {
+    nombre: "Samira",
+    edad: 5,
+    sePortaBien: false
+}
+
+const personasEnCasa = [juan, ricardo, samira]
+
+const alexia = {
+    nombre: "Alexia",
+    edad: 30,
+    sePortaBien: true
+}
+
+personasEnCasa.push(alexia);
+
+console.log(personasEnCasa);
+
+console.log(personasEnCasa.sort((a, b) => a.edad - b.edad))
+
+console.log(personasEnCasa.filter(persona => persona.edad < 29))
+
+console.log(personasEnCasa.find(persona => persona.sePortaBien === false));
