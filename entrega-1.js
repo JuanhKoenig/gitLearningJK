@@ -4,12 +4,12 @@
 // pullir los mensajes de alert para que hayan menos decimales
 
 // -variables, const, arrays -listo
-// -script en el head con defer
+// -script en el head con defer -listo
 // -Minimo 3 funciones CON parametros -listo
 // -Minimo un if -listo
-// -Minimo un ciclo (for/while)
+// -Minimo un ciclo (for/while) -listo
 // -TODO con prompt, console, alert -listo
-// -NADA que exceda a la clase 4 -listo
+// -NADA que exceda a la clase 4 -listo?
 // -Se entrega SI O SI mediante github -ok
 
 
@@ -29,8 +29,18 @@ const kgALbs = kg => kg * 2.20462
 
 
 const menu = function() {
-    const usersChoice = parseInt(prompt("que desea hacer \n1.convertir monedas \n2.convertir pesos \n3.convertir temperaturas"))
+    
+    let repeteirBucle = true
 
+    const terminarCiclo = function(){
+        finalAnswer = prompt("desea realizar otra operacion? y/n")
+            if (finalAnswer == "n") {
+                return repeteirBucle = false
+            }
+    }
+
+    while (repeteirBucle) {
+    const usersChoice = parseInt(prompt("que desea hacer \n1.convertir monedas \n2.convertir pesos \n3.convertir temperaturas"))
 
     switch (usersChoice) {
         case 1:
@@ -44,10 +54,11 @@ const menu = function() {
         }   else {
             alert("opcion invalida") //redondear los numeros para reducir decimales
         }
+        terminarCiclo()
         break;
 
         case 2:
-        const userWeightType = parseInt(prompt("que conversion desea hacer? \n1. Kgs a lbs\n.2 lbs a Kgs"))
+        const userWeightType = parseInt(prompt("que conversion desea hacer? \n1. Kgs a lbs\n2. lbs a Kgs"))
         
         if (userWeightType == 1) {
             const userWeight = parseFloat(prompt("ingrese el peso en Kgs"))
@@ -58,24 +69,31 @@ const menu = function() {
         }   else {
             alert("opcion invalida")
         }
+        terminarCiclo()
         break;
 
         case 3:
-            const userTempType = parseInt(prompt("que conversion desea hacer? \n1. °C a °F\n.2 °F a °C"))
-            if (userTempType == 1) {
-                const userTemp = parseFloat(prompt("ingrese la temperatura en celcius"))
-                alert(convertirAFahrenheit(userTemp))
+        const userTempType = parseInt(prompt("que conversion desea hacer? \n1. °C a °F\n.2 °F a °C"))
+        if (userTempType == 1) {
+            const userTemp = parseFloat(prompt("ingrese la temperatura en celcius"))
+            alert(convertirAFahrenheit(userTemp))
             }   else if (userTempType == 2) {
                 const userTemp = parseFloat(prompt("ingrese la temperatura en fahrenheit"))
                 alert(convertirACelsius(userTemp))
             }   else {
                 alert("opcion invalida")
             }
+            terminarCiclo()
+            break;
 
         default:
-            alert("testing") 
+            alert("opcion invalida")
+            terminarCiclo()
+
 
     }
+    }
 }
+
 
 menu()
