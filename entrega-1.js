@@ -1,19 +1,6 @@
-// tipodes de conversores:
+// tipodes de conversores que puedo agregar:
 // temperatura, monedas, unidades de fisica (velocidades, pesos, energias, etc)
-// usar swirch case en vez de if
 // pullir los mensajes de alert para que hayan menos decimales
-
-// -variables, const, arrays -listo
-// -script en el head con defer -listo
-// -Minimo 3 funciones CON parametros -listo
-// -Minimo un if -listo
-// -Minimo un ciclo (for/while) -listo
-// -TODO con prompt, console, alert -listo
-// -NADA que exceda a la clase 4 -listo?
-// -Se entrega SI O SI mediante github -ok
-
-
-
 
 const convertirACelsius = temp => (temp - 32) / 1.8;
 
@@ -94,6 +81,5 @@ const menu = function() {
     }
     }
 }
-
 
 menu()
