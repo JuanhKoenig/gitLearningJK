@@ -90,9 +90,14 @@ class Pokemon {
     }
 }
 
-const pikachu = new Pokemon('Pikachu', 'electrico')
+// const pikachu = new Pokemon('Pikachu', 'electrico')
 
 const gengar = new Pokemon('Gengar', 'fantasma', 'veneno')
 
+// console.log(pikachu)
+// console.log(gengar)
+
+localStorage.setItem("pokemon", "pikachu");
+
+const pikachu = localStorage.getItem("pokemon");
 console.log(pikachu)
-console.log(gengar)
