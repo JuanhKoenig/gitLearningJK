@@ -1,119 +1,98 @@
-// usar bucles for y while
-// pedir al usuario un numero y mostrarlo
-// pedir otro numero y sumar el resultado con el anterior
-//mostrar el nuevo numero y preguntar si quiere sumar otro
+
+// const convertirACelsius = temp => (temp - 32) / 1.8;
+
+// const convertirAFahrenheit = temp => temp * 1.8 + 32;
+
+// const dolaresAPesos = dolares => dolares * 1466;
+
+// const pesosADolares = pesos => pesos / 1466;
+
+// const lbsAKG = lbs => lbs / 2.20462
+
+// const kgALbs = kg => kg * 2.20462
 
 
+// const menu = function() {
+    
+//     let repeteirBucle = true
 
-function sumarNumeros() {
-let primerNumero = parseInt(prompt("elija un numero"));
-alert(`el numero que usted eligio el es ${primerNumero}`)
+//     const terminarCiclo = function(){
+//         finalAnswer = prompt("desea realizar otra operacion? y/n")
+//             if (finalAnswer == "n") {
+//                 return repeteirBucle = false
+//             }
+//     }
 
-let repeat = true;
+//     while (repeteirBucle) {
+//     const usersChoice = parseInt(prompt("que desea hacer \n1.convertir monedas \n2.convertir pesos \n3.convertir temperaturas"))
 
-while (repeat) {
-    let manytimes = parseInt(prompt("cantas sumas quieres hacer?"))
-    let suma = primerNumero;
-    for (i = 1; i <= manytimes; i++) {
-        alert(`la suma actual es de ${suma} progreso (${i}/${manytimes})`)
-        primerNumero = parseInt(prompt("cuanto quiere sumar?"))
-        suma = primerNumero + suma
-    }
+//     switch (usersChoice) {
+//         case 1:
+//         const userMoneyType = parseInt(prompt("eliga una opcion:\n1.pesos a dolares \n2.dolares a pesos"))
+//         if (userMoneyType == 1) {
+//             const userPesos = parseInt(prompt("escriba el monto en pesos:"))
+//             alert(pesosADolares(userPesos))
+//         }   else if (userMoneyType == 2) {
+//             const userDolares = parseInt(prompt("escriba el monto en dolares:"))
+//             alert(dolaresAPesos(userDolares))
+//         }   else {
+//             alert("opcion invalida") //redondear los numeros para reducir decimales
+//         }
+//         terminarCiclo()
+//         break;
 
-        repeat = false;
+//         case 2:
+//         const userWeightType = parseInt(prompt("que conversion desea hacer? \n1. Kgs a lbs\n2. lbs a Kgs"))
+        
+//         if (userWeightType == 1) {
+//             const userWeight = parseFloat(prompt("ingrese el peso en Kgs"))
+//             alert(kgALbs(userWeight))
+//         }   else if (userWeightType == 2) {
+//             const userWeight = parseFloat(prompt("ingrese el peso en lbs"))
+//             alert(lbsAKG(userWeight))
+//         }   else {
+//             alert("opcion invalida")
+//         }
+//         terminarCiclo()
+//         break;
 
-}
+//         case 3:
+//         const userTempType = parseInt(prompt("que conversion desea hacer? \n1. °C a °F\n.2 °F a °C"))
+//         if (userTempType == 1) {
+//             const userTemp = parseFloat(prompt("ingrese la temperatura en celcius"))
+//             alert(convertirAFahrenheit(userTemp))
+//             }   else if (userTempType == 2) {
+//                 const userTemp = parseFloat(prompt("ingrese la temperatura en fahrenheit"))
+//                 alert(convertirACelsius(userTemp))
+//             }   else {
+//                 alert("opcion invalida")
+//             }
+//             terminarCiclo()
+//             break;
 
-}
+//         default:
+//             alert("opcion invalida")
+//             terminarCiclo()
 
-// let restar = function(numero, resta=1){
-//     return numero - resta;
+
+//     }
+//     }
 // }
 
-// console.log(restar(5, 2));
+// menu()
 
 
-let checkBirthDay = function() {
-    let userYear = parseInt(prompt('en que año naciste?'))
-    let age = 2025 - userYear;
-    let checkBirthDay = prompt('ya paso tu cumpleaños?(y/n)')
-    if (checkBirthDay == 'y') {
-        return alert(`tu edad es ${age}`)
-    } else {
-        return alert(`tu edad es ${age - 1}`)
+class Pokemon {
+    constructor (nombre, tipoA, tipoB="ninguno") {
+        this.nombre = nombre,
+        this.tipoA = tipoA,
+        this.tipoB = tipoB
     }
 }
 
-// checkBirthDay()
+const pikachu = new Pokemon('Pikachu', 'electrico')
 
-let testing = function(numeroraro){
-    return numeroraro
-}
+const gengar = new Pokemon('Gengar', 'fantasma', 'veneno')
 
-// console.log(testing())
-
-// Escribí una función que reciba un número y devuelva true si es par, o false si es impar.
-
-function parOimpar(numero){
-    if (numero % 2 !== 0) {
-        return false
-    } else {
-        return true
-    }
-}
-
-// console.log(parOimpar(7));
-
-//optimizadon con arrow function
-
-imparOpar = numero => (numero % 2 !== 0) ? false : true;
-
-// mas optimizado
-// const imparOpar = numero => numero % 2 === 0;
-// console.log(imparOpar(1));
-
-// funcion que reciba 2 numero y retorne el mayor:
-
-cualEsMayor = (num1, num2) => (num1 > num2) ? num1 : num2
-
-// console.log(cualEsMayor(10, 1))
-
-convertirAfar = temp => temp * 1.8 + 32
-
-// console.log(convertirAfar(-17))
-
-const juan = {
-    nombre: "Juan",
-    edad: 28,
-    sePortaBien: true
-}
-
-const ricardo = {
-    nombre: "Ricardo",
-    edad: 81,
-    sePortaBien: true
-}
-
-const samira = {
-    nombre: "Samira",
-    edad: 5,
-    sePortaBien: false
-}
-
-const personasEnCasa = [juan, ricardo, samira]
-
-const alexia = {
-    nombre: "Alexia",
-    edad: 30,
-    sePortaBien: true
-}
-
-personasEnCasa.push(alexia);
-
-console.log(personasEnCasa);
-
-console.log(personasEnCasa.sort((a, b) => a.edad - b.edad))
-
-console.log(personasEnCasa.filter(persona => persona.edad < 29))
-
-console.log(personasEnCasa.find(persona => persona.sePortaBien === false));
+console.log(pikachu)
+console.log(gengar)
