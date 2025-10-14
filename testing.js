@@ -10,6 +10,8 @@ const lbsAKG = lbs => lbs / 2.20462
 
 const kgALbs = kg => kg * 2.20462
 
+let convertionLog = []
+
 const conversionMoneda = function() {
     const userMoneyType = parseInt(prompt("eliga una opcion:\n1.pesos a dolares \n2.dolares a pesos"))
 
@@ -67,16 +69,16 @@ const conversionTemp = function() {
     const terminarCiclo = function(){
         finalAnswer = prompt("desea realizar otra operacion? y/n")
             if (finalAnswer == "n") {
-                return repeteirBucle = false
+                return repetirBucle = false
             }
     }
 
 const menu = function() {
     
-    let repeteirBucle = true
-    let convertionLog = []
+    let repetirBucle = true
+    
 
-    while (repeteirBucle) {
+    while (repetirBucle) {
     const usersChoice = parseInt(prompt("que desea hacer \n1.convertir monedas \n2.convertir pesos \n3.convertir temperaturas\n4. ver historial"))
 
     switch (usersChoice) {
@@ -113,3 +115,33 @@ const menu = function() {
 }
 
 menu()
+
+
+// class Pokemon {
+//     constructor(pkname, firstType, secondType="ninguno") {
+//         this.pkname = pkname,
+//         this.firstType = firstType,
+//         this.secondType = secondType
+//     }
+// }
+
+// const gengar = new Pokemon("Gengar", "Fantasma", "Veneno")
+// const squirtle = new Pokemon("Squirtle", "Agua")
+
+// console.log(gengar, squirtle)
+
+// class Conversor {
+//         static conversorTarea(celsius) {
+//             return ((celsius * 9/5 ) + 32);
+//         }
+
+// }
+
+
+// class Conversor {
+//     static celsiusAFahrenheit(celsius) {
+//         return (celsius * 9/5) + 32;
+//     }
+
+
+// console.log(Conversor.conversorTarea(100))
